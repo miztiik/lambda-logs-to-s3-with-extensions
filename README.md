@@ -87,7 +87,7 @@ In this article, we will build an architecture, similar to the one shown above. 
 
     Invoke the lambda function few times from the console. You should be able to see something like this on the console,
 
-    ```bash
+      ```bash
       [INFO]	2020-12-21T22:33:43.800Z	5aa0ae4b-20-fbdd12a31c4f	rcvd_evnt:
       {
          'statusCode': 200, 
@@ -105,72 +105,72 @@ In this article, we will build an architecture, similar to the one shown above. 
             }
          }'
       extension.extensions_api_client: Requesting /event/next from Extensions API
-   ```
+      ```
 
-   Go to your s3 bucket - You can find the bucket name in lambda environment variable or in the stack output section - For example my bucket has a name like this `lambda-logs-to-s3-with-exte-lambdalogsbkt64d6-1l93afp6a`. In this bucket, you will find logs named, like `greeter_fn-2020-12-21-22:40:42.634765.log`. Download the file, you will see the same logs that you saw in the console,
+    Go to your s3 bucket - You can find the bucket name in lambda environment variable or in the stack output section - For example my bucket has a name like this `lambda-logs-to-s3-with-exte-lambdalogsbkt64d6-1l93afp6a`. In this bucket, you will find logs named, like `greeter_fn-2020-12-21-22:40:42.634765.log`. Download the file, you will see the same logs that you saw in the console,
 
-   ```json
-   [
-   {
-      "time": "2020-12-21T22:33:43.457Z",
-      "type": "platform.start",
-      "record": {
-         "requestId": "5aa0ae4b-20-fbdd12a31c4f",
-         "version": "$LATEST"
-      }
-   },
-   {
-      "time": "2020-12-21T22:33:43.799Z",
-      "type": "platform.logsSubscription",
-      "record": {
-         "name": "miztiik_automation_lambda_logs_to_s3_extensions.py",
-         "state": "Subscribed",
-         "types": [
-         "platform",
-         "function"
-         ]
-      }
-   },
-   {
-      "time": "2020-12-21T22:33:43.799Z",
-      "type": "platform.extension",
-      "record": {
-         "name": "miztiik_automation_lambda_logs_to_s3_extensions.py",
-         "state": "Ready",
-         "events": [
-         "INVOKE",
-         "SHUTDOWN"
-         ]
-      }
-   },
-   {
-      "time": "2020-12-21T22:33:43.800Z",
-      "type": "function",
-      "record": "[INFO]\t2020-12-21T22:33:43.800Z\t5aa0ae4b-20-fbdd12a31c4f\trcvd_evnt:\n{\"statusCode\": 200, \"body\": \"{'message': 'Hello Miztiikal World, It is 2020-12-21 22:33:43.800082 here! How about there?'}\"}\n"
-   },
-   {
-      "time": "2020-12-21T22:33:43.807Z",
-      "type": "platform.end",
-      "record": {
-         "requestId": "5aa0ae4b-20-fbdd12a31c4f"
-      }
-   },
-   {
-      "time": "2020-12-21T22:33:43.807Z",
-      "type": "platform.report",
-      "record": {
-         "requestId": "5aa0ae4b-20-fbdd12a31c4f",
-         "metrics": {
-         "durationMs": 2.05,
-         "billedDurationMs": 3,
-         "memorySizeMB": 128,
-         "maxMemoryUsedMB": 96,
-         "initDurationMs": 896.74
+      ```json
+      [
+      {
+         "time": "2020-12-21T22:33:43.457Z",
+         "type": "platform.start",
+         "record": {
+            "requestId": "5aa0ae4b-20-fbdd12a31c4f",
+            "version": "$LATEST"
+         }
+      },
+      {
+         "time": "2020-12-21T22:33:43.799Z",
+         "type": "platform.logsSubscription",
+         "record": {
+            "name": "miztiik_automation_lambda_logs_to_s3_extensions.py",
+            "state": "Subscribed",
+            "types": [
+            "platform",
+            "function"
+            ]
+         }
+      },
+      {
+         "time": "2020-12-21T22:33:43.799Z",
+         "type": "platform.extension",
+         "record": {
+            "name": "miztiik_automation_lambda_logs_to_s3_extensions.py",
+            "state": "Ready",
+            "events": [
+            "INVOKE",
+            "SHUTDOWN"
+            ]
+         }
+      },
+      {
+         "time": "2020-12-21T22:33:43.800Z",
+         "type": "function",
+         "record": "[INFO]\t2020-12-21T22:33:43.800Z\t5aa0ae4b-20-fbdd12a31c4f\trcvd_evnt:\n{\"statusCode\": 200, \"body\": \"{'message': 'Hello Miztiikal World, It is 2020-12-21 22:33:43.800082 here! How about there?'}\"}\n"
+      },
+      {
+         "time": "2020-12-21T22:33:43.807Z",
+         "type": "platform.end",
+         "record": {
+            "requestId": "5aa0ae4b-20-fbdd12a31c4f"
+         }
+      },
+      {
+         "time": "2020-12-21T22:33:43.807Z",
+         "type": "platform.report",
+         "record": {
+            "requestId": "5aa0ae4b-20-fbdd12a31c4f",
+            "metrics": {
+            "durationMs": 2.05,
+            "billedDurationMs": 3,
+            "memorySizeMB": 128,
+            "maxMemoryUsedMB": 96,
+            "initDurationMs": 896.74
+            }
          }
       }
-   }
-   ]
-   ```
+      ]
+      ```
 
 1.  ## 📒 Conclusion
 
