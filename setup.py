@@ -16,10 +16,11 @@ setuptools.setup(
     author="author",
 
     package_dir={"": "lambda_logs_to_s3_with_extensions"},
-    packages=setuptools.find_packages(where="lambda_logs_to_s3_with_extensions"),
+    packages=setuptools.find_packages(
+        where="lambda_logs_to_s3_with_extensions"),
 
     install_requires=[
-        "aws-cdk.core==1.75.0",
+        "aws-cdk.core==1.77.0",
     ],
 
     python_requires=">=3.6",
